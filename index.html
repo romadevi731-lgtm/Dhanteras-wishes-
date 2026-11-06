@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Shubh Dhanteras</title>
+    <style>
+        body { margin: 0; min-height: 100vh; background: radial-gradient(circle, #2a0808, #050505); font-family: sans-serif; display: flex; justify-content: center; align-items: center; overflow: hidden; color: #fff; }
+        .card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(212, 175, 55, 0.3); padding: 50px; border-radius: 30px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 1; max-width: 500px; width: 90%; }
+        h1 { color: #ffd700; font-size: 3rem; margin-bottom: 20px; }
+        .diya { font-size: 5rem; margin: 20px 0; display: inline-block; animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        p { font-size: 1.2rem; line-height: 1.6; margin: 20px 0; color: #f0e6d2; }
+        .btn { background: linear-gradient(45deg, #d4af37, #ffaa00); border: none; color: #000; padding: 15px 30px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; cursor: pointer; transition: 0.3s; margin: 10px; }
+        .btn:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>✨ शुभ धनतेरस ✨</h1>
+        <div class="diya">🪔</div>
+        <p id="wish-text">माता लक्ष्मी और भगवान धन्वंतररी आपके जीवन में सुख और समृद्धि लाएं।</p>
+        <button class="btn" onclick="startExperience()">Go</button>
+    </div>
+
+    <script>
+        function startExperience() {
+            const wishes = [
+                "स्वास्थ्य धन है, संतोष सबसे बड़ा धन है। शुभ धनतेरस!",
+                "नया सोना, नया उत्साह! आपका दिन मंगलमय हो。",
+                "कुबेर देव की कृपा आप पर सदैव बनी रहे।"
+            ];
+            const randomIndex = Math.floor(Math.random() * wishes.length);
+            const p = document.getElementById("wish-text");
+            p.innerText = wishes[randomIndex];
+            p.style.color = "#ffd700";
+        }
+    </script>
+</body>
+</html>
